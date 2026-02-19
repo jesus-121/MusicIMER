@@ -3,6 +3,8 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
+![Vistas previas](./screenshot.png)
+
 # 🎵 MusicIMER
 Este es un proyecto de reproductor de música desarrollado para la carrera de Ingeniería en Sistemas Computacionales.
 
