@@ -1,0 +1,13 @@
+<div class="view">
+    <div style="background: var(--bg-window); padding-bottom: 20px; position: sticky; top: 0; z-index: 5;">
+        <h3 style="color: var(--text-main); font-weight: 800; margin-bottom: 15px;">Biblioteca Musical</h3>
+        <div style="position: relative;">
+            <input type="text" id="searchInput" class="admin-input" placeholder="¿Qué quieres escuchar, Juan?" onkeyup="filterSongs()" style="padding-left: 45px; margin-bottom: 0;">
+            <span style="position: absolute; left: 16px; top: 14px; opacity: 0.5;">🔍</span>
+        </div>
+    </div>
+    
+    <div id="results" style="padding-top: 10px;">
+        <p style="text-align:center; opacity:0.3; margin-top:40px;">Cargando biblioteca...</p>
+    </div>
+</div>

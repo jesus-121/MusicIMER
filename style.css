@@ -1,0 +1,57 @@
+:root {
+  --primary: #00e676;
+  --primary-dark: #00a854;
+  --primary-light: #f0fdf4;
+  --bg-window: #ffffff;
+  --bg-body: #f1f5f9;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --gradient-main: linear-gradient(135deg, #00e676 0%, #00a854 100%);
+  --shadow-window: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;
+  background: var(--bg-body); font-family: 'Outfit', sans-serif;
+}
+
+.app-window {
+  width: 700px; height: 550px; background: var(--bg-window); border-radius: 30px;
+  box-shadow: var(--shadow-window); display: flex; flex-direction: column; overflow: hidden;
+}
+
+.window-header { padding: 25px 35px; display: flex; justify-content: space-between; align-items: center; }
+.user-tag { 
+  background: var(--gradient-main); color: white; width: 32px; height: 32px; 
+  display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 11px; 
+}
+
+main { flex: 1; padding: 10px 35px; overflow-y: auto; }
+
+/* Tarjetas y Contenedores */
+.card {
+  background: white; border-radius: 20px; padding: 20px; border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: 0.3s;
+}
+
+.module-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.admin-input {
+  width: 100%; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px;
+  font-family: 'Outfit'; font-size: 14px; box-sizing: border-box; margin-bottom: 10px;
+}
+
+.drop-zone {
+  border: 2px dashed #cbd5e1; background: #f8fafc; border-radius: 20px;
+  padding: 35px; text-align: center; cursor: pointer; transition: 0.3s;
+}
+
+.drop-zone:hover { border-color: var(--primary); background: var(--primary-light); }
+
+.mini-player { padding: 12px 30px; display: flex; align-items: center; gap: 20px; border-top: 1px solid #f1f5f9; }
+.btn-circle { background: var(--gradient-main); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+
+.bottom-nav { display: flex; justify-content: center; gap: 35px; padding: 18px; }
+.nav-link { background: none; border: none; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13px; }
+.nav-link.active { color: var(--primary-dark); position: relative; }
+.nav-link.active::after { content: ''; position: absolute; bottom: -5px; left: 25%; width: 50%; height: 3px; background: var(--primary); border-radius: 10px; }

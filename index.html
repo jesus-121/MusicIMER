@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMER 94.9 - Desktop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-window">
+        <header class="window-header">
+            <div class="brand">IMER 94.9 - Desktop</div>
+            <div class="user-tag">JU</div>
+        </header>
+
+        <main id="mainContent">
+            </main>
+
+        <div class="mini-player">
+            <div class="track-info-mini">
+                <span id="miniTitle">Sin reproducir</span>
+            </div>
+            
+            <div class="player-btns" style="display: flex; align-items: center; gap: 15px;">
+                <button id="playPauseBtn" class="btn-circle">▶</button>
+                
+                <div style="display: flex; align-items: center; gap: 8px; margin-left: 10px;">
+                    <span style="font-size: 10px; font-weight: 800; color: var(--text-muted);">VOL</span>
+                    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" 
+                           style="width: 60px; accent-color: var(--primary); cursor: pointer;">
+                </div>
+            </div>
+
+            <div class="progress-wrap">
+                <div class="progress-bar-bg">
+                    <div id="progressFill" class="progress-bar-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <button class="nav-link active" onclick="loadView('inicio.html', this)">Inicio</button>
+            <button class="nav-link" onclick="loadView('buscador.html', this)">Buscador</button>
+            <button class="nav-link" onclick="loadView('reproductor.html', this)">Reproductor</button>
+            <button class="nav-link" onclick="loadView('gestion.html', this)">Gestión</button>
+        </nav>
+    </div>
+
+    <audio id="mainAudio"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

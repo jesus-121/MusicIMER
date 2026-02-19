@@ -1,0 +1,29 @@
+<div class="view">
+    <h3 style="color: var(--text-main); margin-bottom: 20px;">Control de Biblioteca</h3>
+
+    <div class="card" style="background: white; border: 1px solid #eef2f6; box-shadow: 0 4px 15px rgba(0,0,0,0.02); margin-bottom: 20px;">
+        <p style="margin: 0 0 15px 0; font-size: 12px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 1px;">Registro de MP3</p>
+        
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <input type="text" id="addTitle" class="admin-input" placeholder="Título" style="flex: 1; margin: 0;">
+            <input type="text" id="addArtist" class="admin-input" placeholder="Artista" style="flex: 1; margin: 0;">
+        </div>
+        
+        <div class="drop-zone" id="dropZone" style="border: 2px dashed #cbd5e1; background: #fcfdfe; padding: 45px; border-radius: 20px; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+            <div style="font-size: 32px; margin-bottom: 8px;">💿</div>
+            <p id="dropZoneText" style="margin: 0; font-size: 13px; color: #94a3b8;">Arrastra el archivo aquí</p>
+        </div>
+
+        <button class="btn-admin btn-add" id="saveBtn" style="width: 100%; background: var(--gradient-main); border: none; padding: 18px; border-radius: 15px; color: white; font-weight: 700; cursor: pointer; margin-top: 15px; font-size: 13px; letter-spacing: 0.5px;">
+            GUARDAR EN SQLITE
+        </button>
+    </div>
+
+    <div class="card" style="background: #fffcfc; border: 1px solid #fecaca; padding: 15px;">
+        <h4 style="margin: 0 0 10px 0; color: #ef4444; font-size: 13px;">Mantenimiento de Datos</h4>
+        <input type="text" id="deleteSearch" class="admin-input" placeholder="Buscar para eliminar..." onkeyup="buscarParaEliminar()" style="border-color: #fecaca; height: 40px; font-size: 13px;">
+        
+        <div id="deleteResults" style="max-height: 140px; overflow-y: auto; background: white; border-radius: 10px; margin-top: 10px;">
+            </div>
+    </div>
+</div>
